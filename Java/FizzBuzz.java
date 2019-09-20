@@ -1,4 +1,3 @@
-import java.util.*;
 /*
 Write a program that outputs the string representation of numbers from 1 to n.
 But for multiples of three it should output “Fizz” instead of the number 
