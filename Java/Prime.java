@@ -9,7 +9,7 @@ class Prime{
         return true;
     }
     public static void main(String[] args){
-        if(isPrime(27))
+        if(isPrime(7))
             System.out.println("Is prime");
         else
         System.out.println("not prime");
