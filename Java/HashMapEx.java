@@ -1,3 +1,7 @@
+/* Question 3-2     How do you get the key for the HashMap? *Question is not clear*
+                    ->How do we get all the keys from a HashMap?
+                    ->How do we get a value of a specific key from a HashMap?
+*/
 import java.util.*;
 
 class HashMapEx{
