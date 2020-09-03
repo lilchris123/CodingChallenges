@@ -18,5 +18,9 @@ class CollectionExample{
         map.put(1,"dog");
 
         System.out.println(map.get(1));
+
+        Integer arr[]={5,5,9,2,4};
+
+        new ArrayList<Integer>(Arrays.asList(arr)).stream().distinct().forEach(item -> System.out.print(item));
     }
 }

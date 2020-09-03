@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.*;
 
 
-class fileio implements a,b{
+class fileio {
 
     public static void main(String[] args){
         try{
