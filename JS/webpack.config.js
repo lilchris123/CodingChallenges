@@ -24,6 +24,14 @@ module: {
             use: {
                 loader: 'babel-loader' // specify the loader
             } 
+        },
+        {
+          test: /\.html$/,
+          use: [
+            {
+              loader: "html-loader"
+            }
+          ]
         }
     ]
 }
