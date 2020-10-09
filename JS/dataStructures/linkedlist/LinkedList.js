@@ -23,6 +23,12 @@ export default class LinkedList {
     return this;
   }
 
+  static prepend(head, value) {
+    const newNode = new LinkedListNode(value, head);
+    head = newNode;
+    return head;
+  }
+
   /**
    * @param {*} value
    * @return {LinkedList}
@@ -36,6 +42,20 @@ export default class LinkedList {
     this.tail = newNode;
 
     return this;
+  }
+
+  static append(head, value) {
+    let newNode = new LinkedListNode(value);
+    if (!head) {
+      head.next = newNode;
+      return head;
+    }
+    let curr = head;
+    while (curr.next) {
+      curr = curr.next;
+    }
+    curr.next = newNode;
+    return head;
   }
 
   /**
@@ -66,13 +86,41 @@ export default class LinkedList {
     return deletedNode;
   }
 
+  static delete(head, value) {
+    if (!head) return null;
+    if (head.value === value) {
+      head = head.next;
+      return head;
+    }
+    let prev = null;
+    let curr = head;
+    let next = curr.next;
+
+    while (next) {
+      if (curr.value === value) {
+        prev.next = next;
+        return curr;
+      }
+      prev = curr;
+      curr = next;
+      next = next.next;
+    }
+    return null;
+  }
+
   /**
    * @return {LinkedListNode}
    */
   deleteHead() {
     if (!this.head) return null;
+
     let deletedNode = this.head;
-    this.head = this.head.next;
+    if (this.head.next) this.head = this.head.next;
+    else {
+      this.head = null;
+      this.tail = null;
+    }
+
     return deletedNode;
   }
   /**
@@ -88,6 +136,16 @@ export default class LinkedList {
     }
     return null;
   }
+  static find(head, value){
+    if(!head)
+      return null;
+    while(head){
+      if(head.value=== value)
+        return head;
+      head=head.next;
+    }
+    return null;
+  }
   /**
    * @return {LinkedListNode[]}
    */
@@ -95,7 +153,18 @@ export default class LinkedList {
     const nodes = [];
     let currNode = this.head;
 
-    while(currNode) {
+    while (currNode) {
+      nodes.push(currNode);
+      currNode = currNode.next;
+    }
+    return nodes;
+  }
+
+  static toArray(head) {
+    const nodes = [];
+    let currNode = head;
+
+    while (currNode) {
       nodes.push(currNode);
       currNode = currNode.next;
     }
@@ -111,6 +180,12 @@ export default class LinkedList {
       .map((node) => node.toString(callback))
       .toString();
   }
+  static toString(head, callback) {
+    return LinkedList.toArray(head)
+      .map((node) => node.toString(callback))
+      .toString();
+  }
+
   // 2 -> 5 -> 7 -> null      prev= null curr= 2 next = 5
   // null <- 2  5-> 7 -> null prev= 2 curr =5 next = 7
   // null <- 2 <- 5 7-> null  prev= 5 curr =7 next = null
@@ -132,5 +207,14 @@ export default class LinkedList {
     currNode.next = prevNode;
     this.head = currNode;
     return this;
+  }
+
+  static reversePrint(head,arr){
+    if(!head){
+      return [];
+    }
+    this.reversePrint(head.next,arr)
+    arr.push(head.value);
+    return arr
   }
 }
