@@ -1,4 +1,4 @@
-/**
+/** O(n) Space: O(n)
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
