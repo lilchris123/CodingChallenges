@@ -1,5 +1,8 @@
+package challenges.strings;
+
 public class FixStringCase {
-    public static String solve(final String str) {
+    
+    public static String fixStringCase(final String str) {
         int lowerCount = 0;
         int upperCount = 0;
         for (int i = 0; i < str.length(); i++) {
@@ -10,8 +13,5 @@ public class FixStringCase {
                 lowerCount++;
         }
         return (lowerCount >= upperCount) ? str.toLowerCase(): str.toUpperCase();
-    }
-    public static void main(String[] args) {
-        System.out.println(FixStringCase.solve("C5hrisTopher"));
     }
 }

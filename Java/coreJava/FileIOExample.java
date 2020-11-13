@@ -1,10 +1,9 @@
-import java.util.Scanner;
+package coreJava;
 import java.io.*;
 
+public class FileIOExample {
 
-class fileio {
-
-    public static void main(String[] args){
+    public static void fileIO(){
         try{
         File file= new File("myfile.txt");
             
@@ -27,6 +26,8 @@ class fileio {
         /*while(scanner.hasNextLine()) {
 			System.out.println(scanner.nextLine());
         }*/
+        in.close();
+        out.close();
     }
     catch (Exception e){
         System.out.println("exception");

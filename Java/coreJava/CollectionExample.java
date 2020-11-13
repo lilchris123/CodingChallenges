@@ -1,8 +1,9 @@
+package coreJava;
 import java.util.*;
 
 class CollectionExample{
 
-    public static void main(String[] args){
+    public static void collectionEx(){
 
         Set<Integer> set= new TreeSet<Integer>();
         //set.add(null);

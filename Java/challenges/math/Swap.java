@@ -1,3 +1,4 @@
+package challenges.math;
 
 class Swap{
     public static void main(String[] args){

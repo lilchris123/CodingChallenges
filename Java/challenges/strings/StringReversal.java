@@ -1,13 +1,14 @@
+package challenges.strings;
 //In this Kata, we are going to reverse a string while maintaining the spaces (if any) in their original place.
 
-public class strReversal {
+public class StringReversal{
     static void swap(StringBuilder str, int a, int b) {
         char temp = str.charAt(a);
         str.setCharAt(a, str.charAt(b));
         str.setCharAt(b, temp);
     }
 
-    public static String solve(String s) {
+    public static String strReversal(String s) {
         int l = 0;
         int r = s.length() - 1;
         StringBuilder str = new StringBuilder(s);
@@ -23,9 +24,5 @@ public class strReversal {
             }
         }
         return str.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(strReversal.solve("our code"));
     }
 }

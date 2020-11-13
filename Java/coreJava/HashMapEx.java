@@ -2,11 +2,12 @@
                     ->How do we get all the keys from a HashMap?
                     ->How do we get a value of a specific key from a HashMap?
 */
+package coreJava;
 import java.util.*;
 
-class HashMapEx{
+public class HashMapEx{
 
-    public static void main(String[] args){
+    public static void HMapEx(){
 
         //Declare a map collection interface, which extends the collection interface
         //Key, Value pair structure

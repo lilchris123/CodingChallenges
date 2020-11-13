@@ -1,3 +1,5 @@
+package coreJava;
+
 class A implements Cloneable {
     int i,j;
     A(){}
@@ -11,7 +13,8 @@ class A implements Cloneable {
     }
 }
 class CloneableEx{
-    public static void main(String[] args)throws CloneNotSupportedException{
+    
+    public static void cloneableEx() throws CloneNotSupportedException{
         A a= new A(5,10);
         A b= new A();
         b=(A)a.clone();
