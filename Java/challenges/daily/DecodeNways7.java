@@ -6,7 +6,7 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 
 You can assume that the messages are decodable. For example, '001' is not allowed.
 */
-public class Problem7 {
+public class DecodeNways7 {
     // '111' -> aaa  ak   ka
     public static int decodeNways(String s){
         if(s.length() ==0) 

@@ -7,8 +7,8 @@ interface AddInterface {
 }
 
 public class FunctionalInterface{
-    //define add functional interface with anonymous function
-    public static void AddAnonFunc(){
+    //define add functional interface by implementing it with annonymous class
+    public static void AddAnonClass(){
         AddInterface in = new AddInterface(){
             @Override
             public int add(int num1, int num2) {

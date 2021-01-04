@@ -8,7 +8,7 @@ For example, given s = "abcba" and k = 2, the longest substring with k distinct 
 
 import java.util.*;
 
-public class Problem13 {
+public class LongestDistinctSubStr13 {
     //0(n) find number of distinct characters 
     static int distinctChars(String str){
         Set<Character> set= new HashSet<>();

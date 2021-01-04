@@ -5,14 +5,20 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
  */
 
  function classrooms(lectures){
+    if(lectures.length ==0) return 0;
 
-    let rooms= 0;
+    let rooms= 1;
     for( let i=0; i< lectures.length; i++){
-                if(lecture[1] < room[0] || lecture[0] > room[1])
-                    rooms.push(lecture);
+        for(let j=0; j<= i; j++){
+            if(i == j) continue;
+            if(!(lectures[i][1] < lectures[j][0] || lectures[i][0] > lectures[j][1])){
+                rooms++;
+                break;
+            }
+
         }
     }
-    return rooms.length;
+    return rooms;
  }
 
  console.log(classrooms([[30, 75], [0, 50], [60, 150]]));

@@ -17,7 +17,7 @@ then storing that result at newArr[currentIndex]
 */
 package challenges.daily;
 
-public class Problem2 {
+public class ProductOfNumbers2 {
     public static int[] problem2(int arr[]){
 
         int newArr[]= new int[arr.length];

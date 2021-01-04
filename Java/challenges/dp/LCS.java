@@ -1,6 +1,6 @@
 package challenges.dp;
 
-public class LongestCommonSubSq {
+public class LCS {
 
     static int helper(String text1, int m, String text2, int n, int[][] memo){
         //base case no character before the first character

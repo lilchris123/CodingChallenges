@@ -1,7 +1,7 @@
 import BinaryTreeNode from "../BinaryTreeNode";
 
 export default class BinarySearchTreeNode extends BinaryTreeNode {
-  constructor(value = null) {
+  constructor(value) {
     super(value);
   }
   /**
@@ -13,20 +13,23 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       this.value = value;
       return this;
     }
-    const newNode = BinarySearchTreeNode(value);
+    const newNode = new BinarySearchTreeNode(value);
     // if node value is less than current node than go the left of its subtree
+
     if (newNode.value < this.value) {
       //insert to the left
-      if (this.left) this.left.insert(this.value);
-      this.setLeft(newNode);
+      if (this.left) this.left.insert(newNode.value);
+      else
+        this.setLeft(newNode);
       return newNode;
     }
 
     // if node value is greather than current node than go the right of its subtree
     if (newNode.value > this.value) {
       //insert to the right
-      if (this.right) this.left.insert(this.value);
-      this.setRight(newNode);
+      if (this.right) this.right.insert(newNode.value);
+      else
+        this.setRight(newNode);
       return newNode;
     }
 

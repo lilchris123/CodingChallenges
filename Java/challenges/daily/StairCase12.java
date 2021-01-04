@@ -16,7 +16,23 @@ What if, instead of being able to climb 1 or 2 steps at a time,
 you could climb any number from a set of positive integers X? For example, 
 if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 */
-public class Problem12{
+public class StairCase12{
+
+    public static int numWaysClimbX(int n, int[] x){
+        int dp[]= new int[n+1];
+        dp[0]=1;
+        dp[1]=1;
+
+
+        for(int i =2; i<=n; i++){
+            for(int j=0; j < x.length; j++){
+                dp[i]+= dp[i-(i<x[j]? 0: x[j])];
+            }
+
+        }
+
+        return dp[n];
+    }
     //O(n) buttom up approach
     public static int numWaysDP(int n){
         int dp[]= new int[n+1];

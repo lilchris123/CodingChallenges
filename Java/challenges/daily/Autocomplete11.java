@@ -9,7 +9,7 @@ For example, given the query string de and the set of strings [dog, deer, deal],
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
  */
 
-public class Problem11 {
+public class Autocomplete11 {
     public static List<String> problem11(List<String> wordBank, String prefix){
         List<String> result= new ArrayList<>();
         for(String word : wordBank){

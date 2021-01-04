@@ -9,7 +9,7 @@ package challenges.daily;
 import java.util.Set;
 import java.util.HashSet;
 
-public class Problem1 {
+public class TwoSum1 {
 
     // O(n) Extra Space (n) hashing approach
     // map every element in the array using a HashSet
