@@ -16,22 +16,30 @@ public class MaxWords58 {
 
     //O(n)
     public static List<String> solution1(String s, int k){
+        //split all the words
         String[] words= s.split(" ");
+        //contains our results
         List<String> result= new ArrayList<>();
 
         String currLine= "";
+
         for(String word: words){
-            if(word.length() >k)
+            //word > k, is not breakable
+            if(word.length() > k)
                 return new ArrayList<String>();
+
+            //currLine + current word > k, add line to results and set our currLine with word
             else if(currLine.length() + word.length() > k){
                 result.add(currLine);
                 currLine= word;
             }
+            //case currLine empty dont add a " "
             else if(currLine.length() ==0)
                 currLine = word;
             else
                 currLine+=" "+ word;
         }
+
         if(currLine.length() > 0)
             result.add(currLine);
 
