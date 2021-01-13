@@ -24,16 +24,16 @@ public class wordDistance {
 
         for(String w: words){
             if(w.equals(word1)){
-                word1Loc= index + (w.length() > 1 ? w.length()-1: w.length()) /2.0;
-                // System.out.println("word1 idx: "+ index);
-                // System.out.println("center position: "+(w.length() > 1 ? w.length()-1: w.length()) /2.0);
-                // System.out.println("center postion location: "+word1Loc);
+                word1Loc= index + (w.length()-1) / 2.0;
+                //  System.out.println("word1 idx: "+ index);
+                //  System.out.println("center position: "+ (w.length()-1) / 2.0);
+                //  System.out.println("center postion location: "+word1Loc);
             }
             else if(w.equals(word2)){
-                word2Loc= index + (w.length() > 1 ? w.length()-1: w.length()) /2.0;
-                // System.out.println("word2 idx: "+ index);
-                // System.out.println("center position: "+(w.length() > 1 ? w.length()-1: w.length()) /2.0);
-                // System.out.println("center postion location: "+word2Loc);
+                word2Loc= index + ( w.length()-1) /2.0;
+                //  System.out.println("word2 idx: "+ index);
+                //  System.out.println("center position: "+ (w.length()-1) / 2.0);
+                //  System.out.println("center postion location: "+word2Loc);
             }
             //System.out.println(current);
             current= word2Loc - word1Loc;
