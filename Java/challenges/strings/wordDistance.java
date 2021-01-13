@@ -1,6 +1,6 @@
 package challenges.strings;
 /* Second Goldman sacs interview problem
- Find the shortest distance between the center of two words in a sentence
+ Find the shortest distance between the center of two words in a sentence. Order of words dont matter
 
  sentence: "I love cat and dogs"
  word1: "cat"   center position is 'a' position 1
@@ -35,14 +35,16 @@ public class wordDistance {
                 //  System.out.println("center position: "+ (w.length()-1) / 2.0);
                 //  System.out.println("center postion location: "+word2Loc);
             }
-            //System.out.println(current);
-            current= word2Loc - word1Loc;
+
+            // calculate the distance between the center locations of the two words
+            current= Math.abs(word2Loc - word1Loc);
+            // compare it with the max distance
             shortest= Math.min(shortest,current);
-            //System.out.println(shortest);
 
             index += w.length()+1;
         }
-        return shortest+"d";
+        //if int num == double num ? int num : double num
+        return (int)shortest == shortest ? (int)shortest+"d": shortest+"d";
     }
     
 }
