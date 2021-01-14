@@ -2,16 +2,7 @@ package coreJava;
 
 import java.util.*;
 import java.util.stream.Collectors;
-class Employee{
-    int Salary;
-    UUID ID;
-    String Name;
-    Employee(String name, int salary){
-        this.Name= name;
-        this.Salary=salary;
-        this.ID= UUID.randomUUID();
-    }
-}
+
 public class WorkingWithStreams{
     public static void Example(){
         List<Integer> list = new ArrayList<>();
@@ -40,7 +31,7 @@ public class WorkingWithStreams{
 
         //convert list to map using collectors
         Map<Integer,Integer> m;
-        m = list.stream().map(e -> e).collect(Collectors.toMap((k) -> k, (v) -> v*2));
+        m = list.stream().collect(Collectors.toMap((k) -> k, (v) -> v*2));
         System.out.println("\nConverted to Map and valued doubled: \n"+ m);
 
         //convert list to set using collectors
@@ -49,7 +40,7 @@ public class WorkingWithStreams{
         
         System.out.println("\nlist: \n"+list);
         Set<Integer> s;
-        s = list.stream().map(e -> e).collect(Collectors.toSet());
+        s = list.stream().collect(Collectors.toSet());
         System.out.println("\nConverted to Set: \n"+ s);
     }
 
@@ -61,11 +52,11 @@ public class WorkingWithStreams{
         list.add(new Employee("Stanley", 85000));
 
         Map<Integer,List<Employee>> result;
-        result = list.stream().collect(Collectors.groupingBy(e-> e.Salary));
+        result = list.stream().collect(Collectors.groupingBy(e-> e.getSalary()));
 
         for(Map.Entry<Integer,List<Employee>> e: result.entrySet()){
             System.out.print("Salary: "+e.getKey()+" ");
-            e.getValue().forEach(emp -> System.out.print(emp.Name+" "));
+            e.getValue().forEach(emp -> System.out.print(emp.getName()+" "));
             System.out.println();
         }
     }
