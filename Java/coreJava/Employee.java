@@ -1,5 +1,4 @@
 package coreJava;
-
 import java.util.UUID;
 
 public class Employee implements Comparable<Employee>, Cloneable{
@@ -16,7 +15,7 @@ public class Employee implements Comparable<Employee>, Cloneable{
     public int compareTo(Employee emp){
         return this.getSalary() > emp.getSalary() ? 1 : -1; 
     }
-    //clones another employee
+    //returns a clone of this Employee object
     public Employee clone() throws CloneNotSupportedException{
         return (Employee)super.clone();
     }
