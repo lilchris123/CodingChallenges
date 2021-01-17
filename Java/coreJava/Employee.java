@@ -14,6 +14,7 @@ public class Employee implements Comparable<Employee>, Cloneable, Serializable{
         this.id= UUID.randomUUID();
         this.name=name;
         this.salary=salary;
+        this.SSN=0;
     }
     //By default employees are compared by salaries
     public int compareTo(Employee emp){
@@ -25,7 +26,7 @@ public class Employee implements Comparable<Employee>, Cloneable, Serializable{
     }
     //toString output string
     public String toString(){
-        return this.getId()+" "+this.getName()+" "+this.getSalary()+"\n";
+        return this.getId()+" "+this.getSSN()+" "+this.getName()+" "+this.getSalary()+"\n";
     }
 
     public UUID getId() {
