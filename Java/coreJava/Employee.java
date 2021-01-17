@@ -1,10 +1,14 @@
 package coreJava;
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Employee implements Comparable<Employee>, Cloneable{
+public class Employee implements Comparable<Employee>, Cloneable, Serializable{
+    
+    private static final long serialVersionUID = -5608729411558453056L;
     private UUID id;
     private String name;
     private int salary;
+    private transient long SSN;          // transient field won't be serialized
 
     public Employee(String name, int salary){
         this.id= UUID.randomUUID();
@@ -35,6 +39,12 @@ public class Employee implements Comparable<Employee>, Cloneable{
     }
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+    public long getSSN() {
+        return SSN;
+    }
+    public void setSSN(long sSN) {
+        SSN = sSN;
     }
 
 }
