@@ -81,11 +81,14 @@ public class BishopBattle68 {
         int[] lowerLeft={1,-1};
         int[] lowerRight={1,1};
 
+        // iterate through the chess board
         for(int row=0; row < M; row++){
             for(int col=0; col < M; col++){
+                //current position
                 int[] pos={row,col};
                 int currBattles=0;
 
+                //cell is a bishop
                 if(board[pos[0]][pos[1]] == 'b'){
                     currBattles+= DFS(board, pos, upperLeft );
                     currBattles+= DFS(board, pos, upperRight );
