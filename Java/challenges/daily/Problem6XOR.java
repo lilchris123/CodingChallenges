@@ -1,9 +1,9 @@
 package challenges.daily;
 
 public class Problem6XOR {
-    Node head= null;
+    NodeE head= null;
 
-    public void add(Node element){
+    public void add(NodeE element){
 
     }
     public void get(int index){
@@ -14,7 +14,7 @@ public class Problem6XOR {
     }
 }
 
-class Node{
+class NodeE{
     int value;
     Node both = null;
 }
