@@ -31,8 +31,8 @@ public class JumpGame {
     public static boolean backtracking(int[] arr){
         return btHelper(0,arr);
     }
-
-    public static boolean linear(int[] arr){
+    //Greedy
+    public static boolean greedy(int[] arr){
         int n= arr.length;
         int canReach=0;
         for(int i=0; i <= canReach; i++){
