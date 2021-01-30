@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * "there"]) → ["hello*", "there*"] addStar(["*"]) → ["**"]
  */
 public class AddStarCB {
-    public List<String> addStar(List<String> strings) {
+    public static List<String> addStar(List<String> strings) {
         return strings.stream().map(s -> s+"*").collect(Collectors.toList());
       }
 }

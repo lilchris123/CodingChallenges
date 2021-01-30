@@ -8,7 +8,7 @@ middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 */
 public class MiddleWay {
-    public int[] middleWay(int[] a, int[] b) {
+    public static int[] middleWay(int[] a, int[] b) {
         int[] res= new int[2];
         int mid1= a[a.length/2];
         int mid2= b[b.length/2];

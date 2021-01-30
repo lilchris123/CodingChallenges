@@ -9,7 +9,7 @@ frontPiece([1, 2]) → [1, 2]
 frontPiece([1]) → [1]
 */
 public class FrontPieceCB {
-    public int[] frontPiece(int[] nums) {
+    public static int[] frontPiece(int[] nums) {
         if(nums.length == 0)
           return new int[0];
           

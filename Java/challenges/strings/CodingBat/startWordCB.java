@@ -1,4 +1,4 @@
-package challenges.strings;
+package challenges.strings.CodingBat;
 /*
 Given a string and a second "word" string, we'll say that the word matches the string 
 if it appears at the front of the string, except its first char does not need to match exactly. 

@@ -9,7 +9,7 @@ square([6, 8, -6, -8, 1]) → [36, 64, 36, 64, 1]
 square([]) → []
 */
 public class SquareCB {
-    public List<Integer> square(List<Integer> nums) {
+    public static List<Integer> square(List<Integer> nums) {
         return nums.stream().map(n -> n*n).collect(Collectors.toList());
       }
 }
