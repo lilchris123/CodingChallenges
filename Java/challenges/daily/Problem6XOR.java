@@ -16,5 +16,5 @@ public class Problem6XOR {
 
 class NodeE{
     int value;
-    Node both = null;
+    NodeE both = null;
 }
