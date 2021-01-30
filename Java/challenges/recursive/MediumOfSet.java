@@ -7,10 +7,10 @@ public class MediumOfSet {
 
     //O(NlogN) sorting approach median will be the middle number
     public static int middle(int[] arr){
-        int medium;
+        int median;
         Arrays.sort(arr);
-        medium= arr.length/2;
-        return medium;
+        median= arr[arr.length/2];
+        return median;
     }
 
     //O(n) Median of Medians 
