@@ -1,23 +1,36 @@
-package coreJava;
+package challenges.graphs;
 import java.util.List;
 import java.util.ArrayList;
 
 public class AdjcencyList {
     // A utility function to add an edge in an 
     // undirected graph 
-    public static void addEdge(List<ArrayList<Integer> > adj, int u, int v) 
-    { 
-        //adj.get(u).set(v,v); 
-        adj.get(v).set(u,u); 
+    public static void addEdge(List<ArrayList<Integer> > adj, int v, int u) { 
+        adj.get(v).add(u); 
+        //adj.get(u).add(v); 
     } 
 
-    public static void convert(char[][] m, List<ArrayList<Integer> > adj){
+    public static void convert(int[][] m, List<ArrayList<Integer> > adj){
         int N= m.length;
         for(int i=0; i<N; i++){
             for(int j=0; j<N; j++){
-                if(m[i][j] == '1'){
+                if(m[i][j] == 1){
                     AdjcencyList.addEdge(adj, i, j);
                 }
+                else
+                    AdjcencyList.addEdge(adj, i, 0);
+            }
+        }
+    }
+    public static void convert(List<String[]> m, List<ArrayList<Integer> > adj){
+        int N= m.size();
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+                if(m.get(i)[j].equals("1")){
+                    AdjcencyList.addEdge(adj, i, j);
+                }
+                else
+                    AdjcencyList.addEdge(adj, i, 0);
             }
         }
     }
