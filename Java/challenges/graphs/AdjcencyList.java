@@ -3,8 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class AdjcencyList {
-    // A utility function to add an edge in an 
-    // undirected graph 
+    // A utility function to add an edge in an undirected graph 
     public static void addEdge(List<ArrayList<Integer> > adj, int v, int u) { 
         adj.get(v).add(u); 
         //adj.get(u).add(v); 
@@ -14,6 +13,7 @@ public class AdjcencyList {
         int N= m.length;
         for(int i=0; i<N; i++){
             for(int j=0; j<N; j++){
+                //if cell is 1 add j as an edge to vertex, else j its not an edge add 0
                 if(m[i][j] == 1){
                     AdjcencyList.addEdge(adj, i, j);
                 }
