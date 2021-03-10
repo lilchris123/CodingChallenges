@@ -2,3 +2,6 @@
 *.class
 Java/Challenges.java
 node_modules
+.idea
+out
+*.txt

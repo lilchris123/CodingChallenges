@@ -1,16 +1,24 @@
-import challenges.arrays.MaxiumSubArraySum;
-import challenges.daily.MaxProfit47;
-import challenges.dp.NumWaysToBuy;
-import challenges.strings.SumOfString;
-import coreJava.ParseRequests;
-import coreJava.ParseRequests2;
+import java.util.List;
+import java.util.Scanner;
 
-import java.util.*;
+import challenges.arrays.CodingBat.evenOddCB;
+import challenges.sorting.MergeSort;
+import challenges.sorting.QuickSort;
+import challenges.strings.DoubleConverter;
+import coreJava.formating.Formatting;
+import coreJava.stream.CreateAndPopulateZip;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class Challenges {
 
     public static void main(String[] args){
-
-       System.out.println(SumOfString.sumOfString2("chris12323413414134abc"));
-        
-    }
+        Formatting.format();
+    } 
+    
 }

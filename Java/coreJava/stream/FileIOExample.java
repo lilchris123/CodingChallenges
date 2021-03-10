@@ -1,4 +1,4 @@
-package coreJava;
+package coreJava.stream;
 import java.io.*;
 
 public class FileIOExample {

@@ -1,4 +1,4 @@
-package coreJava;
+package coreJava.exception;
 //Creating a custom exception by extending the Exception class
 public class CustomException extends Exception{
 
