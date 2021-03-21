@@ -1,18 +1,20 @@
 package coreJava;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Serialization {
 
     public static void serialization(Employee emp){
-        String filename = "EmployeeObj.txt";
+        String filename = "files/EmployeeObj.txt";
 
-        try{
-            FileOutputStream file=new FileOutputStream(new File(filename));
-            ObjectOutputStream out = new ObjectOutputStream(file);
+        try(ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(Paths.get(filename)))){
+            //FileOutputStream file=new FileOutputStream(new File(filename));
+            //ObjectOutputStream out = new ObjectOutputStream(file);
             out.writeObject(emp);
             out.close();
-            file.close();
+            //file.close();
             System.out.println("Serialization complete");
         }
         catch(Exception e){
@@ -22,14 +24,14 @@ public class Serialization {
 
     public static Employee deserialization(){
         Employee emp;
-        String filename = "EmployeeObj.txt";
+        String filename = "files/EmployeeObj.txt";
         
-        try{
-            FileInputStream file = new FileInputStream(new File(filename));
-            ObjectInputStream input = new ObjectInputStream(file);
+        try(ObjectInputStream input = new ObjectInputStream(Files.newInputStream(Paths.get(filename)))){
+            //FileInputStream file = new FileInputStream(new File(filename));
+            //ObjectInputStream input = new ObjectInputStream(file);
             emp = (Employee)input.readObject();
             input.close();
-            file.close();
+            //file.close();
             System.out.println("Deserialization complete");
             System.out.println(emp);
         }

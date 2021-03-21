@@ -5,7 +5,7 @@ public class FileIOExample {
 
     public static void fileIO(){
         try{
-        File file= new File("myfile.txt");
+        File file= new File("files/myfile.txt");
             
         FileInputStream in =new FileInputStream(file);
         StringBuilder str=new StringBuilder();
