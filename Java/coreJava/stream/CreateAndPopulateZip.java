@@ -30,7 +30,7 @@ public class CreateAndPopulateZip {
         return zipFs;
     }
     private static void copyToZip(FileSystem zipFs) throws IOException{
-        Path sourceFile= Paths.get("File1.txt");
+        Path sourceFile= Paths.get("files/File1.txt");
         //Path sourceFile= FileSystems.getDefault().getPath("File1.txt");
         Path destFile=zipFs.getPath("/File1Copied.txt");
 
