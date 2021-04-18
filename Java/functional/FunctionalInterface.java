@@ -1,4 +1,4 @@
-package coreJava;
+package functional;
 
 //A simple functional interface for adding function
 interface AddInterface {
