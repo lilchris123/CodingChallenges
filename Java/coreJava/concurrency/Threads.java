@@ -1,4 +1,4 @@
-package coreJava.threads;
+package coreJava.concurrency;
 
 class MyThread extends Thread{
     public void run(){
