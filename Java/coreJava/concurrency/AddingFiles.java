@@ -1,4 +1,4 @@
-package coreJava.threads;
+package coreJava.concurrency;
 
 public class AddingFiles {
     public static void addExample(){
